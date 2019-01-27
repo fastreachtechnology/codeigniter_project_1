@@ -1,0 +1,274 @@
+body
+{
+    background-color: #ccffff;
+    background-image: url('../img/xfn1X.jpg');
+    overflow-x: hidden;
+}
+.bg-primary
+{
+    background-color: #212529 !important;
+}
+.btn-primary
+{
+    background-color: #212529 !important;
+}
+/* -- index page design -- */
+.dotted
+{
+    position: relative;
+    display: inline-block;
+    min-width: 550px;
+    min-height: 185px;
+    border: 5px dotted white;
+    margin-top: 40%;
+    border-radius: 25px;            
+}
+.buttons 
+{
+    display: inline-block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.buttons a 
+{
+    text-decoration: none !important;
+    color: white;
+    width: 80%;
+    height: 100px;
+    margin: 30px 50px;
+    padding: 16px;
+    font-size: 40px;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+.buttons a:hover
+{
+    color: white;
+}
+a.button1:active
+{
+    box-shadow: inset 0 0 25px #00141a;
+}
+a.button2:active
+{
+    box-shadow: inset 0 0 25px #580e2e;
+}
+.button1 
+{
+    display: inline-block;
+    background-color: #003b4d;
+    box-shadow: 0px 15px 20px 0px #00141a, 0px 0px 20px 0px #bbb;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+.button2 
+{
+    display: inline-block;
+    background-color: #a21955;
+    box-shadow: 0px 15px 20px 0px #580e2e, 0px 0px 20px 0px #bbb;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+.button1.inactive
+{
+    position: absolute;
+    left: -1200px;
+    top: 0;
+}
+.button2.inactive
+{
+    position: absolute;
+    right: -1200px;
+    top: 0;
+}
+.dotted:hover .button1.inactive
+{
+    left: 0px;
+} 
+.dotted:hover .button2.inactive
+{
+    right: 0px;
+}
+
+/* -- form design -- */
+.span 
+{
+    float: left;
+    margin-left: 26px;
+    margin-top: -42px;
+    position: relative;
+    z-index: 2;
+    color: #80bdff;
+}    
+.span1
+{
+    float: left;
+    margin-left: 26px;
+    margin-top: -90px;
+    position: relative;
+    z-index: 2;
+    color: #80bdff;
+}   
+.span2
+{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    color: red;
+    z-index: 10000;
+}
+.margin-top
+{
+	margin-top: 180px;
+}
+.inner-box form
+{
+	border: 1px solid #80bdff;
+	box-shadow: -35px -15px 30px 2px #120c16;
+	border-radius: 25px;
+	background-image: url('../img/registration.png');
+    padding: 15px;
+}
+form input, form textarea
+{
+	margin: 0 18px;
+	padding: 15px;
+    border-color: #cce5ff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+}
+input::placeholder, textarea::placeholder
+{
+    color: #80bdff !important;
+}   
+.form-control
+{
+	padding-left: 45px;
+	width: 90% !important;
+}
+.form-control:focus
+{
+	border-color: green !important;
+	box-shadow: 0 0 0 0.2rem rgba(0, 204, 0, .25) !important;
+}
+.main-div
+{
+	position: relative;
+	width: 400px;
+	height: 300px;
+	background-image: url('../img/ghg.jpg');
+	border-radius: 25px;
+}
+.main-div h1
+{
+	color: white;    	
+}
+.inner-box
+{
+	position: absolute;
+	min-width: 400px;
+	top: -100px;
+	left: 65px;
+}
+
+/* -- dashboard -- */
+.custom tr
+{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+#modal-container 
+{
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 1;
+}
+#modal-container .modal-background 
+{
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+}
+#modal-container .modal-background .modal 
+{
+  background: white;
+  padding: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 300;
+  position: relative;
+}
+#modal-container.one 
+{
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.one .modal-background .modal 
+{
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.one.out 
+{
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.one.out .modal-background .modal 
+{
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.modal
+{
+    background-color: #ccffff !important;
+    border-radius: 25px !important;
+    box-shadow: -35px -15px 30px 2px #120c16 !important;
+}
+@keyframes unfoldIn 
+{
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+@keyframes unfoldOut 
+{
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+@keyframes zoomIn 
+{
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoomOut 
+{
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
